@@ -1,0 +1,57 @@
+/* Tokens de diseño de Qualisig. Todo color, radio, sombra y tiempo sale de aquí. */
+:root {
+  /* Superficies y texto */
+  --bg: #F4F6FB;
+  --card: #FFFFFF;
+  --wash: #F8FAFD;
+  --side: #FAFBFE;
+  --ink: #0F1B33;
+  --ink-2: #3A4762;
+  --muted: #5F6C85;
+  --line: #E3E8F2;
+  --line-2: #EDF0F7;
+
+  /* Marca */
+  --brand: #2A50C8;
+  --brand-2: #2242AA;
+  --brand-soft: #EDF1FE;
+  --brand-line: #CDD8FA;
+  --focus: #3D6BF0;
+
+  /* Estados */
+  --ok: #128A56;      --ok-bg: #E3F6EC;   --ok-ink: #0B6B42;
+  --warn: #B26A00;    --warn-bg: #FEF3DC; --warn-ink: #7A4A00;
+  --bad: #D4433A;     --bad-bg: #FDECEA;  --bad-ink: #AE2F27;
+  --nd-bg: #EEF1F6;   --nd-ink: #5F6C85;
+
+  /* Acentos suaves para íconos y tarjetas */
+  --sky-bg: #E7F1FE;  --sky-ink: #1D5FB4;
+  --lav-bg: #EEEBFE;  --lav-ink: #5743C4;
+  --mint-bg: #E2F6EC; --mint-ink: #0E7A4B;
+  --sand-bg: #FDF1DC; --sand-ink: #94590A;
+
+  /* Espaciado (base 4 px) */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 20px; --s6: 24px; --s8: 32px; --s10: 40px;
+
+  /* Radios */
+  --r-sm: 10px; --r-md: 14px; --r-lg: 18px; --r-xl: 24px; --r-full: 999px;
+
+  /* Sombras: muy suaves, en capas */
+  --sh-1: 0 1px 2px rgba(15, 27, 51, .05), 0 1px 1px rgba(15, 27, 51, .03);
+  --sh-2: 0 1px 2px rgba(15, 27, 51, .04), 0 14px 34px -20px rgba(15, 27, 51, .18);
+  --sh-3: 0 28px 72px -20px rgba(15, 27, 51, .36), 0 0 0 1px rgba(15, 27, 51, .05);
+  --sh-brand: 0 10px 24px -12px rgba(42, 80, 200, .65);
+
+  /* Tipografía */
+  --f: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --f-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+  --t-xs: 12px; --t-sm: 13.5px; --t-md: 15px; --t-lg: 17px; --t-xl: 22px;
+  --t-h1: clamp(26px, 3vw, 34px);
+
+  /* Movimiento */
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --fast: .18s;
+  --slow: .36s;
+
+  --side-w: 264px;
+}

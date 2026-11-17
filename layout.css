@@ -1,0 +1,66 @@
+/* ── Ingreso ── */
+.login { min-height: 100vh; min-height: 100dvh; display: flex; padding: 20px; background: radial-gradient(900px 520px at 6% -10%, #DDE6FD 0, transparent 62%), radial-gradient(760px 460px at 106% 110%, #E6E2FC 0, transparent 58%), var(--bg); }
+.lcard { width: min(430px, 100%); margin: auto; padding: 32px 32px 24px; border-radius: 28px; background: var(--card); box-shadow: var(--sh-3); animation: sube .6s var(--ease) both; }
+.lbrand { display: grid; justify-items: center; gap: 4px; margin-bottom: var(--s6); text-align: center; }
+.lbrand b { font-size: 26px; font-weight: 800; letter-spacing: -.035em; margin-top: 10px; }
+.lbrand > span:last-child { color: var(--muted); font-size: var(--t-sm); }
+.logo { display: inline-grid; place-items: center; flex: none; width: 40px; height: 40px; border-radius: 13px; background: linear-gradient(140deg, #3A63E0, #5B45C2); color: #fff; font-weight: 800; font-size: 20px; letter-spacing: -.04em; box-shadow: var(--sh-brand); }
+.logo.lg { width: 60px; height: 60px; border-radius: 19px; font-size: 30px; }
+.lerr { display: flex; gap: 9px; align-items: flex-start; padding: 11px 14px; margin-bottom: var(--s4); border-radius: var(--r-md); background: var(--bad-bg); color: var(--bad-ink); font-size: var(--t-sm); font-weight: 600; animation: sube .3s var(--ease); }
+.lerr svg { margin-top: 2px; }
+.lerr.ok { background: var(--ok-bg); color: var(--ok-ink); }
+.lforgot { display: block; margin: 12px auto 0; padding: 7px 12px; border: 0; border-radius: var(--r-sm); background: none; color: var(--brand); font-weight: 700; font-size: var(--t-sm); transition: background var(--fast); }
+.lforgot:hover { background: var(--brand-soft); }
+.lhint { margin: -4px 0 var(--s4); color: var(--muted); font-size: 14px; }
+.lfoot { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: var(--s5); padding-top: var(--s4); border-top: 1px solid var(--line-2); color: var(--muted); font-size: var(--t-xs); }
+.lwait { display: grid; justify-items: center; gap: 10px; text-align: center; margin-bottom: var(--s6); }
+.lwait h2 { font-size: 19px; font-weight: 800; }
+.lwait .cmd { display: block; width: 100%; padding: 10px 12px; border-radius: var(--r-sm); background: var(--ink); color: #E7ECF7; font-family: var(--f-mono); font-size: 13.5px; user-select: all; }
+.lwait p { color: var(--muted); font-size: 14.5px; overflow-wrap: anywhere; }
+
+/* ── Estructura ── */
+.app { display: grid; grid-template-columns: var(--side-w) minmax(0, 1fr); min-height: 100vh; min-height: 100dvh; }
+.side { position: sticky; top: 0; height: 100vh; height: 100dvh; display: flex; flex-direction: column; padding: 22px 14px 14px; background: var(--side); border-right: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 12px; padding: 0 8px 22px; flex: none; }
+.brand b { display: block; font-size: 18px; font-weight: 800; letter-spacing: -.03em; line-height: 1.15; }
+.brand span:not(.logo) { font-size: var(--t-xs); color: var(--muted); }
+.sscroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; margin: 0 -6px; padding: 2px 6px 8px; scrollbar-width: thin; }
+.nav { display: grid; gap: 2px; }
+.nav h4 { margin: 22px 12px 8px; font-size: 11.5px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.nv { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; color: var(--ink-2); font-weight: 600; font-size: 14.5px; transition: background var(--fast), color var(--fast), box-shadow var(--fast); }
+.nv svg { font-size: 17px; color: var(--muted); transition: color var(--fast); }
+.nv:hover { background: #EEF1F8; }
+.nv[aria-current=page] { background: var(--card); color: var(--ink); box-shadow: var(--sh-1), 0 0 0 1px var(--line); }
+.nv[aria-current=page] svg { color: var(--brand); }
+.nv em { margin-left: auto; padding: 1px 8px; border-radius: var(--r-full); background: var(--line-2); color: var(--muted); font-style: normal; font-size: 11px; font-weight: 700; }
+.sfoot { flex: none; padding-top: 14px; border-top: 1px solid var(--line-2); }
+.me { display: flex; align-items: center; gap: 10px; min-width: 0; padding: 9px 6px 9px 10px; border-radius: 16px; background: var(--card); box-shadow: var(--sh-1), 0 0 0 1px var(--line); }
+.me > div { min-width: 0; flex: 1; }
+.me b, .me small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.me b { font-size: var(--t-sm); line-height: 1.25; }
+.me small { font-size: var(--t-xs); color: var(--muted); }
+.me .iconbtn { width: 34px; height: 34px; border-radius: 10px; }
+
+.col { min-width: 0; display: flex; flex-direction: column; }
+.mbar { display: none; }
+.scrim { display: none; }
+.main { min-width: 0; width: 100%; max-width: 1320px; padding: 32px 40px 96px; }
+.main:focus { outline: 0; }
+#pane.entra { animation: entra .34s var(--ease) both; }
+
+.top, .hero { display: flex; gap: var(--s4); align-items: flex-end; justify-content: space-between; flex-wrap: wrap; margin-bottom: var(--s5); }
+.top h1, .hero h1 { font-size: var(--t-h1); font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
+.top p, .hero p { margin-top: 7px; color: var(--muted); max-width: 62ch; }
+.hero p b { color: var(--ink); }
+.eyebrow { display: block; margin-bottom: 8px; color: var(--muted); font-size: var(--t-sm); font-weight: 600; }
+
+@media (max-width: 960px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+  .side { position: fixed; z-index: 120; left: 0; top: 0; width: min(var(--side-w), 86vw); transform: translate3d(-102%, 0, 0); transition: transform var(--slow) var(--ease); box-shadow: var(--sh-3); visibility: hidden; }
+  .app.menu .side { transform: none; visibility: visible; }
+  .scrim { display: block; position: fixed; inset: 0; z-index: 110; border: 0; padding: 0; background: rgba(15, 27, 51, .36); opacity: 0; pointer-events: none; transition: opacity var(--slow); }
+  .app.menu .scrim { opacity: 1; pointer-events: auto; }
+  .mbar { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 8px; height: 56px; padding: 0 12px; background: rgba(244, 246, 251, .88); backdrop-filter: saturate(1.6) blur(12px); border-bottom: 1px solid var(--line); }
+  .mbar b { font-weight: 800; letter-spacing: -.02em; }
+  .main { padding: 22px 18px 88px; }
+}

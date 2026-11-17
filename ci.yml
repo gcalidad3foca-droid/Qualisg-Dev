@@ -1,0 +1,28 @@
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Verificación estática (secretos, HTML sin sanear, CSP)
+        run: npm run check
+      - name: Pruebas unitarias
+        run: npm test
+      - name: Reglas de la base de datos
+        run: npm run test:rules
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pruebas en navegador
+        run: |
+          pip install playwright
+          npm run test:e2e

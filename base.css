@@ -1,0 +1,40 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 var(--t-md)/1.55 var(--f); letter-spacing: -.003em;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3 { letter-spacing: -.022em; line-height: 1.2; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+button:disabled, select:disabled { cursor: not-allowed; }
+button, a, label, select { touch-action: manipulation; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { margin: 0; padding-left: 18px; }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+[hidden] { display: none !important; }
+::selection { background: #D7E2FF; }
+:focus-visible { outline: 2.5px solid var(--focus); outline-offset: 2px; border-radius: 8px; }
+
+svg.i { width: 1.2em; height: 1.2em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.mono { font-family: var(--f-mono); font-size: .92em; letter-spacing: 0; }
+.salto { position: fixed; left: 12px; top: -60px; z-index: 300; padding: 10px 16px; border-radius: var(--r-md); background: var(--ink); color: #fff; font-weight: 700; transition: top var(--fast); }
+.salto:focus { top: 12px; }
+.nojs { margin: 40px auto; max-width: 40ch; text-align: center; color: var(--muted); }
+
+.splash { min-height: 100vh; min-height: 100dvh; display: grid; place-items: center; }
+.spin { width: 30px; height: 30px; border-radius: 50%; border: 3px solid var(--brand-line); border-top-color: var(--brand); animation: giro .8s linear infinite; }
+
+@keyframes giro { to { transform: rotate(360deg); } }
+@keyframes sube { from { opacity: 0; transform: translate3d(0, 14px, 0) scale(.99); } to { opacity: 1; transform: none; } }
+@keyframes entra { from { opacity: 0; transform: translate3d(0, 10px, 0); } to { opacity: 1; transform: none; } }
+@keyframes brillo { to { background-position: -200% 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

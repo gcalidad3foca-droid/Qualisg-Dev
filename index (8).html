@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--
+  Política de seguridad de contenido. Sin scripts ni estilos en línea.
+  Si se añade un servicio externo, debe declararse aquí (ver docs/SEGURIDAD.md).
+-->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://www.gstatic.com https://*.firebaseio.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://i.imgur.com https://res.cloudinary.com https://*.r2.dev; connect-src 'self' https://www.gstatic.com https://*.firebaseio.com wss://*.firebaseio.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#F4F6FB">
+<meta name="robots" content="noindex, nofollow">
+<title>Qualisig</title>
+<link rel="preconnect" href="https://www.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/views.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script src="src/aviso-arranque.js" defer></script>
+<script type="module" src="src/boot.js"></script>
+</head>
+<body>
+<div id="app"><div class="splash" role="status"><span class="spin"></span><span class="sr">Cargando Qualisig</span></div></div>
+<noscript><p class="nojs">Qualisig necesita JavaScript para funcionar.</p></noscript>
+</body>
+</html>

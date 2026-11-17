@@ -1,0 +1,13 @@
+name = "qualisig-archivos"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "qualisigev"
+
+[vars]
+FIREBASE_PROJECT_ID = "qualisig-auditorias"
+FIREBASE_DB_URL = "https://qualisig-auditorias-default-rtdb.firebaseio.com"
+PUBLIC_BASE_URL = "https://pub-446f9b994cb74c75bad642b850f0cce9.r2.dev"
+ALLOWED_ORIGINS = "https://qualisig.co,https://gcalidad3foca-droid.github.io"

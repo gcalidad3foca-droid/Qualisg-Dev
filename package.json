@@ -1,0 +1,17 @@
+{
+  "name": "qualisig",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Qualisig — sistema de gestión de calidad (FOCA / VIU)",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "test:rules": "node --test \"tests/rules/*.test.js\"",
+    "test:e2e": "python3 tests/e2e/run.py",
+    "check": "node tests/check-static.mjs"
+  },
+  "devDependencies": {
+    "targaryen": "^3.1.0"
+  }
+}
